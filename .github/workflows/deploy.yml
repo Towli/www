@@ -1,0 +1,23 @@
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npm run build --if-present
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Upload S3
+      uses: shallwefootball/upload-s3-action@v1.0.1
+      with:
+        # aws key id
+        aws_key_id: AKIASLXSQVOHN3JURTWK
+        # aws secret access key
+        aws_secret_access_key: ${{ secrets.AWS_ACCESS }}
+        aws_bucket: alextowli.co.uk
+        source_dir: dist/
