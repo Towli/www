@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf out/* && npm run minify-html && npm run minify-js && npm run minify-css && cp -a src/assets/. dist/assets && cp -a src/*.ico dist/",
+    "minify-html": "html-minifier src/index.html -o dist/index.html  --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true",
+    "minify-js": "cat src/js/*.js | minify --js > dist/bundle.js",
+    "minify-css": "cat src/style.css | minify --css > dist/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "minify": "^5.1.1",
     "serve": "^11.3.1"
   }
 }
