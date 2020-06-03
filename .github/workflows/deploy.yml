@@ -13,7 +13,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
       - run: npm run build --if-present
-      - uses: actions/checkout@v1
       - name: S3 Sync
         uses: jakejarvis/s3-sync-action@master
         with:
@@ -22,7 +21,7 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: 'dist/'
+          SOURCE_DIR: 'dist'
       - name: Invalidate Cloudfront
         uses: chetan/invalidate-cloudfront-action@v1.3 
         env:
