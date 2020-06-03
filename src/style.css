@@ -276,3 +276,7 @@ canvas {
   -webkit-filter: none;
   filter: none;
 }
+
+.profile-links a#blog-link:hover {
+  text-decoration: line-through;
+}
