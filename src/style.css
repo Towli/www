@@ -51,6 +51,7 @@ h3::selection {
 .profile,
 .contact,
 .portfolio {
+  background: white;
   position: absolute;
   margin-bottom: 5em;
   margin-left: auto;

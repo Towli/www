@@ -35,7 +35,7 @@ function draw() {
   for(var i = 0; i < particles.length; i++) {
     context.beginPath();
     context.arc(particles[i].x, particles[i].y, particles[i].radius, 0, 2*Math.PI);
-    context.fillStyle = 'rgba(255, 255, 255, 0.8)';
+    context.fillStyle = 'rgba(0, 0, 0, 0.8)';
     context.fill();
 
     particles[i].x += particles[i].velocityX;
