@@ -31,7 +31,7 @@ h3::selection {
   text-decoration: none;
   color: black;
   cursor: pointer;
-  border: 1px solid;
+  border: 2px solid;
   padding: 0.5em 0.5em 0.25em 0.5em;
 }
 
@@ -116,16 +116,8 @@ h3::selection {
 }
 
 .back-link {
-  color: black;
   cursor: pointer;
-  border: 1px solid;
-  padding: 0.5em 0.25em 0.25em 0.25em;
-}
-
-.back-link:hover {
-  background: black;
-  color: white;
-  font-style: bold;
+  font-size:
 }
 
 @media only screen and (min-width: 600px) {
@@ -223,7 +215,7 @@ h3::selection {
   }
 
   .profile-links a {
-    font-size: 22px;
+    font-size: 20px;
     display: inline-block;
     border: none;
   }
@@ -272,10 +264,9 @@ canvas {
 }
 
 .work-thumbnail:hover {
-  transition: 500ms;
   -webkit-filter: none;
   filter: none;
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 .profile-links a#blog-link:hover {
