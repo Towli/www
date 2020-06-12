@@ -10,7 +10,7 @@ var time,
     size = 2,
     speed = 10,
     lights = new Array,
-    colors = ['#eee'];
+    colors = ['#000'];
 
 canvas.setAttribute('width',w);
 canvas.setAttribute('height',h);
@@ -26,7 +26,7 @@ function createParticle() {
   this.velocityX = (Math.random()*2)-1;
   this.velocityY = (Math.random()*2)-1;
   this.radius = Math.random()*1.5;
-  this.color = "white";
+  this.color = "black";
 }
 
 function draw() {

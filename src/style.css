@@ -5,9 +5,9 @@ body {
   margin: 0;
 }
 body {
-  background-image: url("../assets/images/ep-naturalblack.png");
+  /* background-image: url("../assets/images/ep-naturalblack.png"); */
   font: 14px "Josefin Sans", Helvetica, Arial, sans-serif;
-  color: #cccccc;
+  color: black;
   -webkit-flex: 1;
   flex: 1;
   justify-content: center;
@@ -29,15 +29,15 @@ h3::selection {
 
 .cv {
   text-decoration: none;
-  color: #cccccc;
+  color: black;
   cursor: pointer;
   border: 1px solid;
   padding: 0.5em 0.5em 0.25em 0.5em;
 }
 
 .cv:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .main-wrapper {
@@ -59,8 +59,7 @@ h3::selection {
   right: 0;
   display: inline-block;
   padding: 2em;
-  background-color: rgba(1, 1, 1, 0.5);
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.3);
+  border: 3px solid black;
 }
 
 .profile {
@@ -93,7 +92,7 @@ h3::selection {
 
 .profile .header,
 .sub-header {
-  color: #cccccc;
+  color: black;
   font-size: 22px;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -107,7 +106,7 @@ h3::selection {
 .profile-links a {
   margin-left: 2em;
   margin-right: 2em;
-  color: #cccccc;
+  color: black;
   text-decoration: none;
   padding: 0.5em 0.25em 0.25em 0.25em;
   display: block;
@@ -116,15 +115,15 @@ h3::selection {
 }
 
 .back-link {
-  color: #cccccc;
+  color: black;
   cursor: pointer;
   border: 1px solid;
   padding: 0.5em 0.25em 0.25em 0.25em;
 }
 
 .back-link:hover {
-  background: #cccccc;
-  color: black;
+  background: black;
+  color: white;
   font-style: bold;
 }
 
@@ -153,6 +152,7 @@ h3::selection {
     display: inline-block;
     margin-bottom: 3em;
     border: none;
+    font-weight: 600;
   }
 
   .profile-links a:after {
@@ -161,13 +161,13 @@ h3::selection {
     margin: auto;
     height: 0.25em;
     width: 2px;
-    background: #cccccc;
+    background: black;
     transition: width 0.5s ease, background-color 0.4s ease;
   }
 
   .profile-links a:hover:after {
     width: 100%;
-    background: #cccccc;
+    background: black;
   }
 
   .portfolio {
@@ -229,7 +229,7 @@ h3::selection {
 }
 
 canvas {
-  background: url("../assets/images/ep-naturalblack.png");
+  /* background: url("../assets/images/ep-naturalblack.png"); */
   position: absolute;
   top: 0;
   left: 0;
@@ -266,15 +266,15 @@ canvas {
 
 .work-thumbnail {
   height: 130px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.3);
   -webkit-filter: grayscale(100%) opacity(30%);
-  filter: grayscale(100%) opacity(50%);
+  filter: grayscale(100%);
 }
 
 .work-thumbnail:hover {
   transition: 500ms;
   -webkit-filter: none;
   filter: none;
+  transform: scale(1.1);
 }
 
 .profile-links a#blog-link:hover {
