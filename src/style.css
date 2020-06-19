@@ -16,6 +16,10 @@ body {
   z-index: -1;
 }
 
+.hidden {
+  display: none;
+}
+
 a {
   color: #00b7ff;
 }
@@ -91,6 +95,17 @@ h3::selection {
   overflow: hidden;
 }
 
+.portfolio-items .extra-info {
+  position: absolute;
+  z-index: 99;
+  top: 25%;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .profile .header,
 .sub-header {
   color: black;
@@ -117,7 +132,7 @@ h3::selection {
 
 .back-link {
   cursor: pointer;
-  font-size:
+  font-size: ;
 }
 
 @media only screen and (min-width: 600px) {
@@ -187,6 +202,7 @@ h3::selection {
   }
 
   .portfolio-item {
+    position: relative;
     height: 80%;
     width: 33%;
   }
@@ -222,7 +238,6 @@ h3::selection {
 }
 
 canvas {
-  /* background: url("../assets/images/ep-naturalblack.png"); */
   position: absolute;
   top: 0;
   left: 0;
@@ -261,6 +276,12 @@ canvas {
   height: 130px;
   -webkit-filter: grayscale(100%) opacity(30%);
   filter: grayscale(100%);
+}
+
+.work-thumbnail-container {
+  position: relative;
+  display: inline-block;
+  width: auto;
 }
 
 .work-thumbnail:hover {
