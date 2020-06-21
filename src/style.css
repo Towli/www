@@ -274,19 +274,22 @@ canvas {
 
 .work-thumbnail {
   height: 130px;
-  -webkit-filter: grayscale(100%) opacity(30%);
-  filter: grayscale(100%);
 }
 
 .work-thumbnail-container {
   position: relative;
   display: inline-block;
   width: auto;
+  -webkit-filter: grayscale(100%) opacity(30%);
+  filter: grayscale(100%);
+}
+
+.work-thumbnail-container:hover {
+  -webkit-filter: none;
+  filter: none;
 }
 
 .work-thumbnail:hover {
-  -webkit-filter: none;
-  filter: none;
   transform: scale(1.02);
 }
 
