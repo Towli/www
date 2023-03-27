@@ -279,7 +279,7 @@ canvas {
 .work-thumbnail-container {
   position: relative;
   display: inline-block;
-  width: auto;
+  width: 250px;
   -webkit-filter: grayscale(100%) opacity(30%);
   filter: grayscale(100%);
 }
